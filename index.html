@@ -1,84 +1,69 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
+<head>
+  <title>George Crawford-Eng</title>
+<link rel="stylesheet" href="mystyle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/w3css/3/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<body>
+</head><body>
 
-<!-- Navigation -->
-<nav class="w3-bar w3-black">
-  <a href="#home" class="w3-button w3-bar-item">Home</a>
-  <a href="#band" class="w3-button w3-bar-item">Band</a>
-  <a href="#tour" class="w3-button w3-bar-item">Tour</a>
-  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
-</nav>
+<div class="slideshow-container">
 
-<!-- Slide Show -->
-<section>
-  <img class="mySlides" src="img_band_la.jpg"
-  style="width:100%">
-  <img class="mySlides" src="img_band_ny.jpg"
-  style="width:100%">
-  <img class="mySlides" src="img_band_chicago.jpg"
-  style="width:100%">
-</section>
+<div class="mySlides fade">
+  <img src="1E3A3684.jpg" width=100%>
+  <div class="text">George Crawford-Eng</div>
+</div>
 
-<!-- Band Description -->
-<section class="w3-container w3-center w3-content" style="max-width:600px">
-  <h2 class="w3-wide">THE BAND</h2>
-  <p class="w3-opacity"><i>We love music</i></p>
-  <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</section>
+<div class="mySlides fade">
+  <img src="Snapchat-341956272.jpg" width=100%>
+  <div class="text">George Crawford-Eng</div>
+</div>
 
-<!-- Band Members -->
-<section class="w3-row-padding w3-center w3-light-grey">
-  <article class="w3-third">
-    <p>John</p>
-    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
-    <p>John is the smartest.</p>
-  </article>
-  <article class="w3-third">
-    <p>Paul</p>
-    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
-    <p>Paul is the prettiest.</p>
-  </article>
-  <article class="w3-third">
-    <p>Ringo</p>
-    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
-    <p>Ringo is the funniest.</p>
-  </article>
-</section>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-  <a href="#"><i class="fa fa-facebook-official"></i></a>
-  <a href="#"><i class="fa fa-pinterest-p"></i></a>
-  <a href="#"><i class="fa fa-twitter"></i></a>
-  <a href="#"><i class="fa fa-flickr"></i></a>
-  <a href="#"><i class="fa fa-linkedin"></i></a>
-  <p class="w3-medium">
-  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </p>
-</footer>
+</div>
+<br>
 
 <script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex = 0;
-carousel();
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 3000);
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 </script>
 
+<div class="menu">
+  <button class="button">About Me</button>
+  <button class="button">Projects</button>
+  <button class="button">Hobbies</button>
+</div>
+
+<footer>
+  <a href="https://www.linkedin.com/in/george-crawford-eng-4a9b6a286"><img src="icons/whitelinkedin.png" width=40px style="object-position: 0px 0px;"></a>
+  <a href="https://github.com/gce8111"><img src="icons/whitegithublogo.png" width=40px style="object-position: 0px 0px;"></a>
+  <a href="mailto:gcrawfordeng3@gatech.edu"><img src="icons/grayscalegmaillogo.png" width=40px style="object-position: 0px 0px;"></a>
+</footer>
+
 </body>
-</html>
+</html> 
