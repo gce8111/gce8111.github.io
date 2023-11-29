@@ -90,6 +90,11 @@ footer {position: fixed; padding: 5px 5px 5px 5px; bottom: 0; width: 100%;}
   color: black;
 }
 
+.main-text {
+  color: white;
+  font-family: "Times New Roman", serif;
+}
+
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
