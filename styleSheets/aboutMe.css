@@ -44,7 +44,7 @@ footer {position: fixed; padding: 5px 5px 5px 5px; bottom: 0; width: 100%;}
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: black;
+  background-color: transparent;
   color: white;
   border: 2px solid white;
   width: 150px;  
@@ -91,9 +91,10 @@ footer {position: fixed; padding: 5px 5px 5px 5px; bottom: 0; width: 100%;}
   width: 450px;
 }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+#home-button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 /* On smaller screens, decrease text size */
