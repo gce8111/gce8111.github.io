@@ -40,7 +40,7 @@ footer {position: fixed; padding: 5px 5px 5px 5px; bottom: 0; width: 100%;}
   background-color: transparent;
   color: white;
   border: 2px solid white;
-  width: 150px;  
+  width: 150px;
 }
 
 .button:hover {
@@ -72,7 +72,7 @@ footer {position: fixed; padding: 5px 5px 5px 5px; bottom: 0; width: 100%;}
 #pads-image {
   float: left;
   margin: 10px;
-  height: 150px;
+  height: 125px;
   width: 325px;
 }
 
