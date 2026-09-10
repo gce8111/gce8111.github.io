@@ -1,63 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>George Crawford-Eng</title>
-<link rel="stylesheet" href="styleSheets/landingPage.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head><body>
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <img src="images/index/bannerImages/1E3A3684.jpg" width=100%>
-  <div class="text">George Crawford-Eng</div>
-</div>
-
-<div class="mySlides fade">
-  <img src="images/index/bannerImages/Snapchat-341956272.jpg" width=100%>
-  <div class="text">George Crawford-Eng</div>
-</div>
-
-<div class="mySlides fade">
-  <img src="images/index/bannerImages/20231127_152734.jpg" width=100%>
-  <div class="text">George Crawford-Eng</div>
-</div>
-
-</div>
-<br>
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000);
-}
-
-</script>
-
-<div class="menu">
-  <a href="aboutMe.html">
-    <button class="button">About Me</button>
-  <a>
-  <a href="projects.html">
-    <button class="button">Projects</button>
-  <a>
-</div>
-
-<footer>
-  <a href="https://www.linkedin.com/in/george-crawford-eng-4a9b6a286"><img src="images/index/icons/whitelinkedin.png" width=40px style="object-position: 0px 0px;"></a>
-  <a href="https://github.com/gce8111"><img src="images/index/icons/whitegithublogo.png" width=40px style="object-position: 0px 0px;"></a>
-  <a href="mailto:gcrawfordeng3@gatech.edu"><img src="images/index/icons/grayscalegmaillogo.png" width=40px style="object-position: 0px 0px;"></a>
-</footer>
-
+    <title>Project PDF Viewer</title>
+</head>
+<body>
+    <!-- Use an iframe or object tag to display the file -->
+    <iframe src="./assets/2.44GHzPatchAntennaDesignandTesting(Annotated).pdf" width="100%" height="800px"></iframe>
 </body>
 </html>
